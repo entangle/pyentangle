@@ -1,0 +1,12 @@
+MAX_INT8 = 1 << 7 - 1
+MIN_INT8 = -1 << 7
+MAX_INT16 = 1 << 15 - 1
+MIN_INT16 = -1 << 15
+MAX_INT32 = 1L << 31 - 1
+MIN_INT32 = -1L << 31
+MAX_INT64 = 1L << 63 - 1
+MIN_INT64 = -1L << 63
+MAX_UINT8 = 1 << 8 - 1
+MAX_UINT16 = 1 << 16 - 1
+MAX_UINT32 = 1L << 32 - 1
+MAX_UINT64 = 1L << 64 - 1
