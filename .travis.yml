@@ -6,7 +6,7 @@ python:
 install:
   - "wget 'https://docs.google.com/uc?authuser=0&id=0B0xs9kK-b5nMOWIxWGJhMXd6aGs&export=download' -O snappy-1.1.2.tar.gz"
   - "tar xf snappy-1.1.2.tar.gz"
-  - "cd snappy-1.1.2 && ./configure && make && sudo make install"
+  - "cd snappy-1.1.2 && ./configure && make && sudo make install && cd .."
   - "pip install -r requirements.txt --use-mirrors"
   - "pip install -r dev-requirements.txt --use-mirrors"
 script: make test
