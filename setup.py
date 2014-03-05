@@ -13,6 +13,7 @@ requires = [
     'enum34',
     'python-snappy',
     'msgpack-python',
+    'six',
 ]
 
 tests_require = [

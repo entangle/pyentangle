@@ -269,10 +269,7 @@ class PackBinaryTestCase(TestCase):
         for ser, expected in [
                 ('', ''),
                 ('  ', '  '),
-                (u'', u''),
-                (u'  ', u'  '),
                 ('Binary value', 'Binary value'),
-                (u'Binary value', u'Binary value'),
         ]:
             actual = pack_binary(ser)
             self.assertEqual(actual, packer.pack(expected))
@@ -281,6 +278,9 @@ class PackBinaryTestCase(TestCase):
                 None,
                 1,
                 True,
+                u'',
+                u'  ',
+                u'Binary value',
         ]:
             with self.assertRaises(PackingError):
                 pack_binary(ser)
