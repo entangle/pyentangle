@@ -3,10 +3,8 @@ python:
   - "2.6"
   - "2.7"
   - "3.3"
-before_install:
-  - "sudo apt-get update"
 install:
-  - "wget https://docs.google.com/uc?authuser=0&id=0B0xs9kK-b5nMOWIxWGJhMXd6aGs&export=download -O snappy-1.1.2.tar.gz"
+  - "wget 'https://docs.google.com/uc?authuser=0&id=0B0xs9kK-b5nMOWIxWGJhMXd6aGs&export=download' -O snappy-1.1.2.tar.gz"
   - "tar xf snappy-1.1.2.tar.gz"
   - "cd snappy-1.1.2 && ./configure && make && sudo make install"
   - "pip install -r requirements.txt --use-mirrors"
