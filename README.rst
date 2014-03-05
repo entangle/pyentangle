@@ -1,4 +1,4 @@
 Entangle runtime library for Python
 ===================================
 
-.. image:: https://api.travis-ci.org/entangle/pyentangle.png
+.. image:: https://travis-ci.org/entangle/pyentangle.png?branch=master   :target: https://travis-ci.org/entangle/pyentangle
