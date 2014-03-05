@@ -46,7 +46,9 @@ class Connection(object):
         while data:
             try:
                 sent = self._sock.send(data)
-            except socket.error as (code, msg):
+            except socket.error as e:
+                code, msg = e
+
                 if code == errno.EINTR:
                     continue
                 if code == errno.EPIPE:
