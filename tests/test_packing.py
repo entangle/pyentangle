@@ -1,4 +1,5 @@
 import msgpack
+from six import binary_type
 from unittest import TestCase
 from entangle.constants import (
     MAX_INT8, MIN_INT8, MAX_INT16, MIN_INT16, MAX_INT32, MIN_INT32, MAX_INT64,
@@ -267,9 +268,9 @@ class PackBinaryTestCase(TestCase):
         """
 
         for ser, expected in [
-                ('', ''),
-                ('  ', '  '),
-                ('Binary value', 'Binary value'),
+                (binary_type(''), ''),
+                (binary_type('  '), '  '),
+                (binary_type('Binary value'), 'Binary value'),
         ]:
             actual = pack_binary(ser)
             self.assertEqual(actual, packer.pack(expected))
