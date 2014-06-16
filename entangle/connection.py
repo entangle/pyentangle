@@ -245,7 +245,10 @@ class Connection(object):
             except snappy.UncompressError as e:
                 raise BadMessageError('decompression error: %s' % (e))
 
-            return self._deserialize_message(data)
+            # Deserialize the uncompressed data and recursively deserialize.
+            unpacker = msgpack.Unpacker()
+            unpacker.feed(data)
+            return self._deserialize_message(unpacker.unpack())
 
         raise NotImplementedError('opcode not implemented: %r' % (opcode))
 
